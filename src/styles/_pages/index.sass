@@ -1,67 +1,334 @@
-/////////////////////////////////
-// Phần Slider
-/////////////////////////////////
-.home-slider
-	.owl-carousel
-		// Phần Slider
-		.item
-			position: relative
-			.title
-				+pad(2rem 0)
-				height: 100%
-				width: 100%
-				display: flex
-				align-items: center
-			+media-breakpoint-up(md)
-				.title
-					+pos(abs, 0 null null 0)
-					color: $whites
-					+text-shadow()
-					h2
-						+fz(3rem)
-					p 
-						+fz(1.5rem)
-						+lh(2rem)
-		// Phần Control
-		.owl-dots
-			margin-bottom: 2rem
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
+// body
+// 	background: $blacks
+.home-banner
+	.banner
+		position: relative
+		background-position: center center
+		background-image: url(https://raw.githubusercontent.com/thanhtam282/GYM_club_web/master/dist/css/../img/home_panel.png)
+		background-repeat: no-repeat
+		background-size: cover
+		min-height: 500px
+		width: 100%
 
-.home-news
-	.item 
-		figure
-			.blockimg
-				+bor-rad(10px)
-				overflow: hidden
-				img
-					width: 100%
-			figcaption 
-				margin-top: 1rem
-				h3 
-					+fz(1.1rem)
-					margin-bottom: 0
-				time 
-					+fz(.85rem)
-					color: darken($whites,30%)
-				p 
-					margin-top: .5rem
-					color: darken($whites,50%)
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
 
-.home-clients
-	.owl-carousel
-		.item 
-			+pad(.5rem)
-		// Phần Control
-		.owl-nav
-			margin-bottom: 2rem
-			button 
-				i 
-					display: block
-					width: 2rem
-					height: 2rem
-					+lh(2rem)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .product
+// 	margin-top: 3rem
+// 	.item
+// 		a
+// 			text-decoration: none
+// 			figure
+// 				.blockimg
+// 					overflow: hidden
+// 					position: relative
+// 					&:before
+// 						content: ""
+// 						display: block
+// 						width: 100%
+// 						height: 100%
+// 						position: absolute
+// 						top: 0
+// 						left: 0
+// 						z-index: 1
+// 					img
+// 						transition: .5s all ease-in-out
+// 						width: 100%
+// 						filter: grayscale(100%)
+// 				figcaption
+// 					margin-top: 1rem
+// 					h3
+// 						text-transform: uppercase
+// 						color: $whites
+// 						+fz(1.2rem)	
+// 					.price
+// 						color: darken($whites, 40%)
+// 						+fz(1.2rem)
+// 			&:hover,
+// 			&:active
+// 				figure
+// 					.blockimg
+// 						&:before
+// 							box-shadow: 0 0 0 4px $sun-flower inset
+// 						img
+// 							transform: scale(1.2)
+// 							filter: grayscale(0%)
+// 					figcaption
+// 						h3
+// 							color: $sun-flower
+// 						.price
+// 							color: cyan
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Phần Banner
+// .home-banner
+// 	position: relative
+// 	figure
+// 		+mar(0)
+// 		img
+// 			width: 100%
+// 			display: flex
+// 			align-items: center
+// 	.title
+// 		+pos(abs, 9% null null 3rem)
+// 		color: $whites
+// 		h1
+// 			+fz(1.2rem)
+// 			background: rgba($sun-flower, .5)
+// 			max-width: 48%
+// 			padding: .5rem
+// 			display: inline-block
+// 		p
+// 			max-width: 65%
+// 			// position: absolute
+// 			// top: 83%
+// 			// left: 23%
+// 		.btn-more
+// 			background: $whites
+// 			+mar(0 null null null)
+// 			color: $blacks
+// 			border-radius: 0
+// 			+fz(.7rem)
+// 	+media-breakpoint-up(md)
+// 		.title
+// 			+pos(abs, 25% null null 12%) 
+// 			h1
+// 				font-size: 2rem
+// 				max-width: 100%
+// 				background: none
+// 				padding: 0
+// 			p
+// 				font-size: 1.2rem
+// 				max-width: 80%
+// 	+media-breakpoint-up(lg)
+// 		.title
+// 			+pos(abs, 25% null null 8%)
+// 			line-height: 2rem
+// 			h1
+// 				font-size: 2.5rem
+// 				max-width: 100%
+// 			p
+// 				+mar(1rem null null null)
+// 				font-size: 1.5rem
+// 				max-width: 70%
+// 			.btn-more
+// 				+fz(1.3rem)
+// 				+pad(.5rem 1rem)
+// 				+mar(2rem null null null)
+// 				transition: .5s all ease-in-out
+// 				&:hover
+// 					background: $blacks
+// 					box-shadow: 0 0 0 3px $sun-flower 
+// 					color: $whites
+// 					transition: .5s all ease-in-out
+// // Phần Slider
+// .home-slider
+// 	.owl-carousel
+// 		position: relative
+// 		.banner-item
+// 			text-decoration: none
+// 			.item
+// 				.title
+// 					+pos(abs, 12% null null 26%)
+// 					text-align: center
+// 					h2
+// 						color: $whites
+// 						+fz(1.3rem)
+// 						background: $blacks
+// 						+pad(.3rem)
+// 						margin-bottom: 0
+// 					p	
+// 						background: $sun-flower
+// 						max-width: 70%
+// 						color: $blacks
+// 	+media-breakpoint-up(md)
+// 		.owl-carousel
+// 			position: relative
+// 			.banner-item
+// 				.item
+// 					.blockimg
+// 						+mar(null 10%)
+// 					.title
+// 						text-align: left
+// 						+pos(abs, 15% null null 10%)
+// 						.col
+// 							padding-left: 0
+// 						h2
+// 							+fz(2rem)
+// 							margin-bottom: 0
+// 						p
+// 							+fz(1.2rem)
+// 							max-width: 53%
+// 							padding: .3rem
+// 	+media-breakpoint-up(lg)
+// 		.owl-carousel
+// 			position: relative
+// 			.banner-item
+// 				.item
+// 					.blockimg
+// 						+mar(null 8rem)
+// 					.title
+// 						+pos(abs, 20% null null 8.3%)
+// 						h2
+// 							+fz(3rem)
+// 							letter-spacing: 3px
+// 						p
+// 							max-width: 58%
+// 							padding: .3rem
+// 							+fz(2rem)
+// 							letter-spacing: 2px
+// 			.owl-dots 
+// 				+pos(abs, 74% null null 43%)
+// 				.owl-dot 
+// 					span
+// 						width: 30px
+// 						height: 8px	
+// 					&.active
+// 						span
+// 							background: $sun-flower	
+
+
+
+
+
+					
+					
+					
+
+
+					
+
+
+
+
+
+			
+	
+	// Phần Clients
+// .home-clients
+// 	background: $blacks
+// 	align-items: center
+// 	justify-content: center
+// 	text-align: center
+// 	.slogun
+// 		margin-top: 2rem
+// 		color: $whites
+// 		position: relative
+// 		z-index: 999
+// 		&:before
+// 			content: ""
+// 			display: block
+// 			background: $sun-flower
+// 			height: .2rem
+// 			width: 100%
+// 			position: absolute
+// 			top: 1.2rem
+// 			z-index: -1
+// 		// &:after
+// 		// 	content: ""
+// 		// 	display: block
+// 		// 	background: $blacks
+// 		// 	height: 1rem
+// 		// 	width: 20rem
+// 		// 	position: absolute
+// 		// 	left: 37%
+// 		// 	top: .8rem
+// 		// 	z-index: -1
+// 	.owl-carousel.owl-theme
+// 		position: relative
+// 		.item
+// 			img
+// 				padding: 1.5rem 4rem
+// 				opacity: .5
+// 				width: 100%
+// 				&:hover
+// 					opacity: 1
+// 		.owl-nav
+// 			button
+// 				height: 2rem
+// 				width: 2rem
+// 				background: $sun-flower
+// 			.owl-prev
+// 				position: absolute
+// 				left: 1rem
+// 				position: absolute
+// 				top: 25%
+// 				margin-right: 1rem
+// 			.owl-next
+// 				position: absolute
+// 				right: 1rem
+// 				position: absolute
+// 				top: 25%
+// 				margin-left: 1rem
+// 	+media-breakpoint-down(md)
+// 		.slogun
+// 			&:before
+// 				// width: 50rem
+// 			// &:after
+// 			// 	left: 30%
+// 	// +media-breakpoint-down(sm)
+// 	// 	.slogun
+// 	// 		&:before
+// 	// 			width: 50rem
+// 	// 		&:after
+// 	// 			left: 30%
+		
+				
+			
+				
+		

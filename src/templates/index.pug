@@ -8,71 +8,139 @@ block variables
 
 //- Phần khai báo body
 block body
-	//- Bạn viết code vào đây nhớ là phải mở đầu bằng section ở mỗi khối
-	section.home-slider
-		.owl-carousel.owl-theme
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
+	//- Phần Banner
+	section.home-banner
+		article.banner
+			figure
+				img.img-fluid(src="./img/home-banner.png", alt="banner 1")
+			.container
 				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
-				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-			.item
-				img(src="./img/home_slider_1.jpg", alt="")
-				.title
-					.container
-						.row
-							.col-md-7
-								h2 Chúng tôi là FullStack Vietnam
-								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-	section.home-news
+					.row
+						.col-md-7
+							h1 Chúng tôi là 
+								br
+								| FullStack Vietnam
+							p Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+							a.btn.btn-more(href="#") READ MORE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//- section.product
 		.container
 			.row
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_1.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_2.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-				.col-md-4.item
-					figure
-						.blockimg
-							img(src="./img/home_news_3.jpg", alt="", srcset="")
-						figcaption
-							h3 
-								a(href="#") Chúng tôi là FullStack Vietnam
-							time 22/06/2018
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
-	section.home-clients.mt-5
+				- for(x=1;x<5;x++)
+					.col-sm-6.col-md-3.item
+						a(href="#")
+							figure
+								.blockimg
+									img(src="./img/home-product-"+x+".png", alt="", srcset="")
+									figcaption
+										h3 trung tâm đào tạo it chuyên nghiệp
+										.price $80
+
+	//- //- Phần Slider
+	//- section.home-slider
+	//- 	.owl-carousel.owl-theme
+	//- 		a.banner-item(href="#", title="slider")
+	//- 			.item
+	//- 				.blockimg
+	//- 					figure
+	//- 						img.img-fluid(src="./img/home-slider.png", alt="slider")
+	//- 				.title
+	//- 					.container
+	//- 						.row
+	//- 							.col
+	//- 								h2 USA'S HOTTEST JEANS
+	//- 								P SHOPPING NOW!!!
+	//- 		a.banner-item(href="#", title="slider")
+	//- 			.item
+	//- 				.blockimg
+	//- 					figure
+	//- 						img.img-fluid(src="./img/home-slider.png", alt="slider")
+	//- 				.title
+	//- 					.container
+	//- 						.row
+	//- 							.col
+	//- 								h2 USA'S HOTTEST JEANS
+	//- 								P SHOPPING NOW!!!
+	//- 		a.banner-item(href="#", title="slider")
+	//- 			.item
+	//- 				.blockimg
+	//- 					figure
+	//- 						img.img-fluid(src="./img/home-slider.png", alt="slider")
+	//- 				.title
+	//- 					.container
+	//- 						.row
+	//- 							.col
+	//- 								h2 USA'S HOTTEST JEANS
+	//- 								P SHOPPING NOW!!!
+	//- 		a.banner-item(href="#", title="slider")
+	//- 			.item
+	//- 				.blockimg
+	//- 					figure
+	//- 						img.img-fluid(src="./img/home-slider.png", alt="slider")
+	//- 				.title
+	//- 					.container
+	//- 						.row
+	//- 							.col
+	//- 								h2 USA'S HOTTEST JEANS
+	//- 								P SHOPPING NOW!!!
+							
+
+
+	//- Phần Clients
+	//- section.home-clients
 		.container
 			.row
 				.col
-					.owl-carousel.owl-theme
-						- for(x=1;x<10;x++)
-							.item
-								if (x < 7)
-									img(src="./img/clients_"+x+".png", alt="")
-								else
-									img(src="./img/clients_"+(x-3)+".png", alt="")
+						h2.slogun FullStackVietNam
+		.owl-carousel.owl-theme
+			.item
+				.blockimg
+					img(src="./img/home-clients-1.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-2.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-3.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-4.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-5.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-6.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-5.png", alt="clients")
+			.item
+				.blockimg
+					img(src="./img/home-clients-6.png", alt="clients")

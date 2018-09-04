@@ -1,10 +1,111 @@
 header
-	.navbar
-		+pad(null 0)
-	.navbar-brand
-		img 
-			max-height: 2rem
+	.container
+		// +pad(0)
+		.navbar
+			// background: gray
+			+pad(0 0rem)
+			.navbar-brand
+				margin-right: 0
+				+pad(0)
+				img
+					filter: grayscale(100%)
+					+pad(1rem null)
+					backgound: rgba(0,0,0,.5)
+			#fullStackMenu
+				.navbar-nav
+					.nav-item
+						border-bottom: 1px solid $sun-flower
+						.nav-link
+							+fz(1.2rem)
+							color: $blacks
+							transition: .3s all ease-in-out
 	+media-breakpoint-up(md)
-		.navbar-brand
-			img 
-				max-height: 3rem
+		.container
+			+pad(null 0)
+			max-width: 90%
+	+media-breakpoint-up(lg)
+		.container
+			.navbar
+				#fullStackMenu
+					.navbar-nav
+						+mar(0)
+						.nav-item
+							border: none
+							.nav-link:hover
+								// box-shadow: 0 0 2px 50px #000000 inset
+								background: #000000
+								color: #ffffff
+								border-top-left-radius: 10px
+								border-bottom-right-radius: 10px
+
+
+
+	
+					
+
+			
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// +pos(abs , 0 null null 0)
+	// z-index: 999
+	// max-width: 100%
+	// .navbar
+	// 	+mar(null null null 3rem)
+	// 	background: $whites
+	// 	+pad(null 0)
+	// 	.navbar-nav
+	// 		.nav-item
+	// 			.nav-link
+	// 				+fz(1.14rem)
+	// 				+fw(400)
+	// 				color: $blacks
+	// 				border-bottom: 1px dashed $sun-flower
+	// .navbar-brand
+	// 	img 
+	// 		max-height: 2rem
+	// 		filter: grayscale(5000)
+	// +media-breakpoint-up(lg)
+	// 	.navbar
+	// 		.navbar-nav
+	// 			.nav-item
+	// 				.nav-link
+	// 					+transition(all .5s ease-in-out)
+	// 					border-bottom: none
+	// 					&:hover
+	// 						border-top-left-radius: 10px
+	// 						border-bottom-right-radius: 10px
+	// 						background: $blacks
+	// 						color: $whites
+	// 	.navbar-brand
+	// 		img 
+	// 			max-height: 3rem
